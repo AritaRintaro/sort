@@ -23,19 +23,24 @@ void quick_sort(int A[], int n){
     A[n/2] = A[0];
     A[0] = pivot;
     for (i = j = 1; i < n; i++){
+        if(A[i] <= pivot) {
         swap(A+i, A+j);
         j++;
+        }
     }
-    swap(A+0, A+j-1)
-}
-if (NULL, 0) return ;
-else return quick_sort(A+1, j-1); pivot; quick_sort(A+j, n)
-    
-    
-    
-    
+    swap(A+0, A+j-1);
+
+
+if (n==0) return ;
+else return quick_sort(A+0, j-1), quick_sort(A+j, n-j);
     
 }
+    
+    
+    
+    
+    
+
 
 int main(){
   int i;

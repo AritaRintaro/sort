@@ -24,10 +24,14 @@ int quick_select(int A[], int n, int k){
   pivot = A[n/2];
   A[n/2] = A[0];
   A[0] = pivot;
-  for(i = j = 1; i < n; i++){
-    if(A[i] <= pivot){
+  for(i = j = l = 1; i < n; i++){
+    if(A[i] < pivot){
       swap(A+i, A+j);
       j++;
+    }
+    else if (A[i] = pivot){
+        swap(A, A);
+        k++;
     }
   }
 
