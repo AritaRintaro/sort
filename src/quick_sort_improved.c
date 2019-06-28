@@ -30,13 +30,13 @@ void quick_sort(int A[], int n){
 
 
   }
-  for(m = l = 1; m < j; i++){
+  for(m = l = 1; m < j; m++){
   if(A[m] < pivot){
     swap(A+m, A+l);
     l++;
   }}
 
-swap(A+0, A+l);
+swap(A+0, A+l-1);
 
 if (n==0) return ;
 else return quick_sort(A+0, l-1), quick_sort(A+j, n-j);
